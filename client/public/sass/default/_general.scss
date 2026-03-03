@@ -48,7 +48,7 @@ body {
 }
 
 header ul {
-  @media (min-width: 991px) {
+  @media (min-width: 992px) {
     background: map-get($colors, whiteOpacity2);
     border: 1px solid rgb(255 255 255 / 16%);
     border-radius: 30px; 

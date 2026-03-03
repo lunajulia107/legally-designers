@@ -511,7 +511,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-@media (min-width: 991px) {
+@media (min-width: 992px) {
   header ul {
     background: #050505;
     border: 1px solid rgba(255, 255, 255, 0.16);

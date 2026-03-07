@@ -1,6 +1,6 @@
 # 🌐 Projeto: Legally Designers
 
-Landing page institucional desenvolvida para a **Legally Designers**, uma agência criativa focada em **design, marketing e desenvolvimento de sites**.
+Landing page institucional desenvolvida para a **Legally Designers**, uma agência fictícia focada em **design, marketing e desenvolvimento de sites**.
 O site apresenta os serviços da agência, exibe projetos realizados e permite que visitantes entrem em contato diretamente através de um **formulário integrado ao backend**.
 
 ---

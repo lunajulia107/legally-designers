@@ -3,10 +3,17 @@ logs
 *.log
 npm-debug.log*
 
+# Dependências e Build (Node)
 node_modules
 dist
 dist-ssr
 *.local
+
+# Dependências (PHP/Composer)
+vendor/
+
+# Variáveis de Ambiente
+*.env
 
 # Editor directories and files
 .vscode/*
@@ -18,4 +25,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.env

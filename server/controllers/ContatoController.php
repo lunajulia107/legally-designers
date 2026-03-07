@@ -3,7 +3,7 @@ require_once '../config/database.php';
 require_once '../models/Contato.php';
 
 class ContatoController {
-    public function registrarContato($data) {
+    public function registerContact($data) {
         $database = new Database();
         $db = $database->connect();
 
@@ -13,7 +13,7 @@ class ContatoController {
         $contato->tipo_servico = $data['servico'] ?? '';
         $contato->descricao = $data['descricao'] ?? '';
 
-        if ($contato->salvar()) {
+        if ($contato->saveDatas()) {
             http_response_code(200);
             echo json_encode(["mensagem" => "Contato registrado com sucesso"]);
         } else {

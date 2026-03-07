@@ -1,7 +1,7 @@
-// Configurações de conexão com o banco de dados
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
+// Carrega as variáveis do arquivo .env localizado na raiz da pasta server
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
@@ -12,15 +12,14 @@ class Database {
     private $password;
     private $conn;
 
-    // Configurações de conexão com o banco de dados
     public function __construct() {
-        $this->host = getenv('DB_HOST');
-        $this->db_name = getenv('DB_NAME');
-        $this->username = getenv('DB_USER');
-        $this->password = getenv('DB_PASS');
+        // Alterado de getenv() para $_ENV para garantir a leitura correta
+        $this->host = $_ENV['DB_HOST'] ?? 'localhost';
+        $this->db_name = $_ENV['DB_NAME'] ?? '';
+        $this->username = $_ENV['DB_USER'] ?? '';
+        $this->password = $_ENV['DB_PASS'] ?? '';
     }
 
-    // Método para estabelecer a conexão com o banco de dados
     public function connect() {
         if ($this->conn) {
             return $this->conn;
@@ -38,6 +37,7 @@ class Database {
                 ]
             );
         } catch (PDOException $e) {
+            // Log do erro para depuração no terminal
             error_log("Erro de conexão ao DB: " . $e->getMessage());
             die("Erro ao conectar ao banco de dados.");
         }

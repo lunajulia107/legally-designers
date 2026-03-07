@@ -19,7 +19,7 @@ $input = json_decode(file_get_contents("php://input"), true);
 // Verificar o método da requisição
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $controller = new ContatoController();
-    $controller->registrarContato($input);
+    $controller->registerContact($input);
 } else {
     http_response_code(405);
     echo json_encode(["mensagem" => "Método não permitido"]);

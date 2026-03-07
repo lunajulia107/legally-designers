@@ -6,7 +6,12 @@ interface FormErrors {
   userName: string;
 }
 
-const WhatsappPopup: React.FC = () => { 
+interface WhatsappPopupProps {
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
+}
+
+const WhatsappPopup: React.FC<WhatsappPopupProps> = ({ isOpen, setIsOpen }) => { 
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState<FormErrors>({
     phoneNumber: "",
@@ -14,7 +19,6 @@ const WhatsappPopup: React.FC = () => {
     userName: "",
   });
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [popupVisible, setPopupVisible] = useState(false);
   const [serviceType, setServiceType] = useState("");
   const [userName, setUserName] = useState("");
 
@@ -22,7 +26,7 @@ const WhatsappPopup: React.FC = () => {
   const whatsappNumber = "+5511999999999";
 
   // Alterna a visibilidade do popup
-  const togglePopup = () => setPopupVisible((prev) => !prev);
+  const togglePopup = () => setIsOpen(!isOpen);
 
   // Formata o número de telefone (Brasil)
   const formatPhoneNumber = (value: string): string => {
@@ -58,7 +62,7 @@ const WhatsappPopup: React.FC = () => {
     };
 
     try {
-      await fetch("http://localhost/projectLegallyDesigners/backend/api/contato.php", {
+      await fetch("http://localhost:8000/api/contato.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
@@ -78,21 +82,21 @@ const WhatsappPopup: React.FC = () => {
     setPhoneNumber("");
     setServiceType("");
     setUserName("");
-    setPopupVisible(false);
+    setIsOpen(false);
   };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
-        setPopupVisible(false);
+        setIsOpen(false);
       }
     };
 
-    if (popupVisible) {
+    if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [popupVisible]);
+  }, [isOpen, setIsOpen]);
 
   return (
     <>
@@ -102,12 +106,13 @@ const WhatsappPopup: React.FC = () => {
         onClick={togglePopup}
         title="Fale conosco"
         type="button"
+        style={{ zIndex: 1050 }}
       >
         <i className="bi bi-whatsapp fs-3"></i>
       </button>
 
-      {popupVisible && (
-        <div ref={popupRef} id="whatsapp-popup" className="box-transparent p-4 rounded-4">
+      {isOpen && (
+        <div ref={popupRef} id="whatsapp-popup" className="box-transparent p-4 rounded-4 shadow-lg">
           <form onSubmit={handleSubmit}>
             <h5 className="fw-bolder mb-3">Fale com a gente</h5>
 

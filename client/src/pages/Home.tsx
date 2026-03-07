@@ -68,7 +68,11 @@ const AnimatedSection: React.FC<{
   </motion.section>
 );
 
-const Home: React.FC = () => { 
+interface HomeProps {
+  onOpenWhatsapp: () => void;
+}
+
+const Home: React.FC<HomeProps> = ({ onOpenWhatsapp }) => {
   // Configuração das animações de scroll para cada seção
   const sections = Array.from({ length: 8 }, () => UseScrollAnimation());
 
@@ -161,7 +165,7 @@ const Home: React.FC = () => {
 
       {/* Seção de apresentação da agência */}
       <AnimatedSection animation={sections[1]}>
-        <div className="align-items-stretch d-flex flex-wrap gap-4 justify-content-between">
+        <div className="align-items-stretch d-flex flex-wrap gap-5 justify-content-between">
           <div className="col-lg-3">
             <img src="/images/home/three.png" alt="Símbolo 3D abstrato em degradê roxo, rosa, azul e verde." />
             <h4 className="ms-2">
@@ -169,8 +173,12 @@ const Home: React.FC = () => {
             </h4>
           </div>
 
-          <div className="bg-white col-lg-4 rounded-4">
-            <img className="w-100 object-fit-cover rounded-4" src="" alt="" />
+          <div className="col-lg-4 rounded-4">
+            <img className="w-100 object-fit-cover rounded-4" 
+              src="/images/home/legally-designers.png" 
+              alt="Três jovens mulheres em uma agência moderna, banhadas por 
+              luzes neon magenta e ciano, colaboram em um projeto de identidade visual 
+              exibido em um monitor de alta resolução." />
           </div>
 
           <div className="col-lg-3 d-flex flex-column justify-content-end">
@@ -349,9 +357,12 @@ const Home: React.FC = () => {
               <h3 className="mb-3">Pronta para elevar sua marca com um time criativo e estratégico?</h3>
               <p className="lead">Vamos conversar sobre como destacar seu negócio no digital, com identidade, propósito e resultado.</p>
               <div className="mt-4">
-                <a href="mailto:legallyDesigners@gmail.com" className="btn btn-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white">
+                <button 
+                  onClick={onOpenWhatsapp}
+                  className="btn btn-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white border-0"
+                >
                   Fale com a gente <i className="bi bi-arrow-right ms-3 text-white"></i>
-                </a>
+                </button>
               </div> 
             </div>
             <div className="align-items-end col-lg-6 d-flex justify-content-end"> 

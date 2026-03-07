@@ -1,5 +1,10 @@
 // Configurações de conexão com o banco de dados
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
 class Database {
     private $host;
     private $db_name;

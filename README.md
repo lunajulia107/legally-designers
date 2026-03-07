@@ -112,7 +112,8 @@ npm run dev
 
 ---
 
-## 📸 Demonstração
+## 📸 Landing page
+<img src="./client/public/images/landing-page.gif" width="400px">
 
 ---
 

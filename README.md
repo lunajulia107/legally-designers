@@ -1,107 +1,131 @@
-# Legally Designers
+# 🌐 Projeto: Legally Designers
 
-🌐 Site oficial da **Legally Designers**, uma agência criativa especializada em design, marketing e desenvolvimento web. Este projeto é uma landing page simples, criada para divulgação dos trabalhos da agência, com foco em:
-
-* Design Visual
-* Gestão de Redes Sociais
-* Sites Estratégicos
+Landing page institucional desenvolvida para a **Legally Designers**, uma agência criativa focada em **design, marketing e desenvolvimento de sites**.
+O site apresenta os serviços da agência, exibe projetos realizados e permite que visitantes entrem em contato diretamente através de um **formulário integrado ao backend**.
 
 ---
 
-## Sobre o Projeto
+## 📌 Sobre o Projeto
 
-📄 O projeto é dividido em duas partes principais: o backend em PHP e o frontend em React com TypeScript, utilizando Vite como bundler.
+Aplicação **fullstack** composta por:
+
+* **Frontend:** React + Vite + TypeScript
+* **Backend:** PHP
+* **Banco de Dados:** MySQL
+* **Estilização:** Bootstrap e Sass
+
+O objetivo do projeto é criar uma **landing page moderna, responsiva e focada em conversão**, destacando os serviços da agência e facilitando o contato com potenciais clientes.
+Para o desenvolvimento do frontend, foi utilizado o **React**, visando **maior organização do código e melhor escalabilidade para futuras melhorias e expansões do projeto**.
 
 ---
 
-## Estrutura do Projeto
+## 👤 Área do Visitante
+
+* Navegação pelas seções da landing page
+* Visualização de serviços oferecidos
+* Apresentação de projetos realizados
+* Envio de formulário de contato para o backend e WhatsApp
+
+---
+
+## 🚀 Funcionalidades
+
+* Landing page institucional
+* Envio de formulário de contato para o backend e WhatsApp
+* Interface moderna e responsiva
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+### Front-end
+
+* **React** — construção da interface
+* **TypeScript** — tipagem estática
+* **Vite** — ferramenta de build rápida
+* **Bootstrap** — estruturação de layout responsivo e componentes de interface
+* **Sass** — organização e escalabilidade de estilos
+
+### Back-end
+
+* **PHP** — processamento do formulário de contato
+* **API simples** para comunicação entre frontend e backend
+
+---
+
+## 🗄 Banco de Dados
+
+O projeto possui um script SQL pronto localizado em:
 
 ```
-legallyDesigners/
-│
-├── backend/                Código do backend (API)
-│   ├── config/             Configurações do banco de dados, ambiente etc.
-│   ├── controllers/        Controladores (ex: ContatoController.php)
-│   ├── models/             Modelos do banco de dados (ex: Contato.php)
-│
-├── frontend/               Código do frontend (React + TypeScript)
-│   ├── node_modules/       Dependências do frontend
-│   ├── public/             Arquivos públicos estáticos
-│   ├── src/                Código fonte do frontend
-│   │   ├── components/     Componentes React reutilizáveis
-│   │   ├── pages/          Páginas da aplicação
-│   │   ├── App.tsx         Componente principal
-│   │   └── main.tsx        Ponto de entrada do React
-│   ├── package.json        Configuração do npm do frontend
-│   ├── vite.config.ts      Configuração do Vite
-│   └── tsconfig.json       Configuração do TypeScript
-│
-├── .gitignore              Arquivos e pastas ignorados pelo Git
-└── README.md               Este arquivo
+server/db/script.sql
+
+```
+
+Esse arquivo contém toda a estrutura necessária para a criação do banco local.
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 1️⃣ Clonar repositório
+
+```bash
+git clone https://github.com/seu-usuario/legally-designers.git
+
+```
+
+### 2️⃣ Instalar dependências
+
+**Client (React)**
+
+```bash
+cd client
+npm install
+
+```
+
+**Server (PHP/Composer)**
+
+```bash
+cd server
+composer install
+
+```
+
+### 3️⃣ Configurar variáveis de ambiente
+
+Criar um arquivo `.env` dentro da pasta **server** com suas credenciais de banco de dados e chaves necessárias.
+
+### 4️⃣ Rodar aplicação
+
+**Back-end**
+Certifique-se de que seu servidor local (Apache/MySQL) está ativo e apontando para a pasta `server`.
+
+**Front-end**
+
+```bash
+cd client
+npm run dev
+
 ```
 
 ---
 
-## Tecnologias Utilizadas
-
-💻
-
-* **Backend:** PHP com arquitetura MVC simples
-* **Frontend:** React + TypeScript
-* **Bundler:** Vite
-* **Banco de Dados:** MySQL (configuração no backend)
-* **Gerenciamento de dependências:** npm/yarn para frontend
+## 📸 Demonstração
 
 ---
 
-## Como Rodar o Projeto
+## 🤝 Créditos do Projeto
 
-### 1. Configurar o Backend
+Projeto acadêmico desenvolvido em equipe, com divisão de responsabilidades.
 
-* 📂 Acesse a pasta `backend`
-
-* 📝 Crie um arquivo `.env` para configurar a conexão com o banco, por exemplo:
-
-  ```
-  DB_HOST=localhost
-  DB_NAME=nome_banco
-  DB_USER=root
-  DB_PASS=sua_senha
-  ```
-
-* 🖥️ Configure seu servidor local PHP (XAMPP, WAMP) apontando para a pasta `backend`
-
-* ✅ Certifique-se que o banco MySQL está rodando e configurado com o banco
-
-### 2. Rodar o Frontend
-
-* 📂 Acesse a pasta `frontend`
-
-* 📦 Instale as dependências:
-
-  ```bash
-  npm install
-  ```
-
-* 🚀 Inicie o servidor de desenvolvimento:
-
-  ```bash
-  npm run dev
-  ```
-
-* 🌐 O frontend estará disponível em `http://localhost:<numero_da_porta>`
+* 💻 **UI Design, Desenvolvimento e Implementação:** Julia Gomes
+* 🎨 **Designer:** Samara Duarte
+* 🔎 **UX Research:** Camila Bonilha
 
 ---
 
-## Contato
+## 📄 Licença
 
-✉️ Para dúvidas ou sugestões, entre em contato comigo:
-**Email:** [rodriguesjuliaw23@gmail.com](mailto:rodriguesjuliaw23@gmail.com)
-
----
-
-## Autores
-
-* ✍️ UX Writer/UI - Camila Bonilha
-* 👩‍💻 UX/UI & Desenvolvimento Full-stack - Julia Gomes
-* 🎨 Designer - Samara Duarte
+Este projeto está sob a licença **MIT**.

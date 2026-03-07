@@ -7,7 +7,7 @@ O site apresenta os serviços da agência, exibe projetos realizados e permite q
 
 ## 📌 Sobre o Projeto
 
-Aplicação **fullstack** composta por:
+Aplicação composta por:
 
 * **Frontend:** React + Vite + TypeScript
 * **Backend:** PHP

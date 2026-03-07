@@ -122,7 +122,7 @@ npm run dev
 Projeto acadêmico desenvolvido em equipe, com divisão de responsabilidades.
 
 * 💻 **UI Design, Desenvolvimento e Implementação:** Julia Gomes
-* 🎨 **Designer:** Samara Duarte
+* 🎨 **Designer (Identidade Visual):** Samara Duarte
 * 🔎 **UX Research:** Camila Bonilha
 
 ---

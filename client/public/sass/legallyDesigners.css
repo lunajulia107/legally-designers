@@ -565,6 +565,12 @@ footer .a-social-medias {
   height: 300px;
   width: 300px;
 }
+@media (max-width: 991px) {
+  .box-image img {
+    height: 200px;
+    width: 200px;
+  }
+}
 
 .box-images img {
   height: 64px;

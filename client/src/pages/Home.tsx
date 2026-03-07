@@ -146,16 +146,13 @@ const Home: React.FC<HomeProps> = ({ onOpenWhatsapp }) => {
           </div>
         </div>
 
-        <div className="align-items-end d-flex flex-wrap gap-3 justify-content-between mt-3 pt-3">
-          <a
-            href="mailto:legallyDesigners@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer" 
+        <div className="align-items-end d-flex flex-wrap gap-3 justify-content-between mt-3 pt-3"> 
+          <button 
+            onClick={onOpenWhatsapp}
             className="btn btn-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white"
           >
-            Quero impulsionar
-            <i className="bi bi-arrow-right ms-3 text-white"></i>
-          </a>
+            Quero impulsionar <i className="bi bi-arrow-right ms-3 text-white"></i>
+          </button>
 
           <h6 className="text-white-50">Design Visual</h6>
           <h6 className="text-white-50">Gestão de Redes Sociais</h6> 
@@ -230,10 +227,13 @@ const Home: React.FC<HomeProps> = ({ onOpenWhatsapp }) => {
                 </div>
               </div>
 
-              <div className="d-flex flex-wrap gap-4 mb-5 mt-3">
-                <a href="mailto:legallyDesigners@gmail.com" className="btn btn-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white">
+              <div className="d-flex flex-wrap gap-4 mb-5 mt-3"> 
+                <button 
+                  onClick={onOpenWhatsapp}
+                  className="btn btn-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white"
+                >
                   Entrar em contato <i className="bi bi-arrow-right ms-3 text-white"></i>
-                </a>
+                </button>
                 <a href="#projetos" className="btn btn-border-purple fs-5 p-2 pe-4 ps-4 rounded-5 text-decoration-none text-white">
                   Conferir projetos <i className="bi bi-arrow-right ms-3 text-white"></i>
                 </a>

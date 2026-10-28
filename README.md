@@ -1,4 +1,4 @@
-# 🌐 Legally Designers
+# 🌐legally-designers
 
 **Landing page institucional da Legally Designers**, uma agência fictícia focada em **design, marketing e desenvolvimento de sites**. O site apresenta os serviços da agência, exibe projetos realizados e permite que visitantes entrem em contato diretamente através de um **formulário integrado ao backend**.
 
